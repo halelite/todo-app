@@ -38,6 +38,20 @@
         
     }
 
+    // function for deleting todos from list
+    function deleteTodo() {
+
+        for(let i = 0; i < cross.length; i++) {
+            cross[i].addEventListener('click', (e) => {
+                e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+                // updating the number of todos
+                todoItems = document.querySelectorAll('li');
+                leftItems.textContent = calculateLeft();
+            })
+        }
+        
+    }
+
     let todoBtn = document.querySelectorAll('li button');
     let todoItems = document.querySelectorAll('li');
     const addTodo = document.querySelector('.addTodo button');
@@ -78,24 +92,26 @@
 
             markDoneJobs();
 
+            deleteTodo();
+
+
         }
         
         addInput.value = ''
     });
 
+    addInput.addEventListener('keypress', (e) => {
+    
+        if(e.key == "Enter") {
+            addTodo.click();
+        }
+        
+    });
+
 
     showCross();
 
-    // event for deleting todos from list
-    for(let i = 0; i < cross.length; i++) {
-        cross[i].addEventListener('click', () => {
-            todoItems[i].parentElement.removeChild(todoItems[i]);
-
-            // updating the number of todos
-            todoItems = document.querySelectorAll('li');
-            leftItems.textContent = calculateLeft();
-        })
-    };
+    deleteTodo();
     
     // event for filter buttons
     for(let i = 0; i < filterBtns.length; i++) {
