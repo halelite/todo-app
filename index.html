@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  
+  <title>Todo app</title>
+</head>
+<body>
+
+  <main class="container">
+    <div class="header">
+      <h1>Todo</h1>
+      <img id="light" src="./images/icon-sun.svg" alt="sun">
+      <img id="dark" src="./images/icon-moon.svg" alt="moon">
+    </div>
+    
+      <div class="addTodo">
+        <div class="addBtn">
+          <button type="button"></button>
+        </div>
+        <input type="text" name="" id="addInput" placeholder="Create a new todo...">
+      </div>
+
+      <div class="todo-sec">
+        <ul class="todo-items">
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>Complete online JavaScript course</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>Jog around the park 3x</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>10 minutes meditaion</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>Read for 1 hour</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>Pick up groceries</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+          <li draggable="true">
+            <div><button type="button"></button></div>
+            <p>Complete to do app on Frontend Mentor</p>
+            <img src="./images/icon-cross.svg" alt="cross">
+          </li>
+        </ul>
+        <div class="tools">
+          <p><span class="left"></span> items left</p>
+          <button type="button" id="clear">Clear Completed</button>
+        </div>
+      </div>
+
+      <div class="filters">
+        <button type="button" id="all" class="active">All</button>
+        <button type="button" id="active">Active</button>
+        <button type="button" id="completed">Completed</button>
+      </div>
+    
+    <p class="para">Drag and drop to reorder list</p>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/halelite">Hale</a>.
+  </div>
+
+  <script src="./script.js"></script>
+  
+</body>
+</html>
